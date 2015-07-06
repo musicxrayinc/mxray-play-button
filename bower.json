@@ -1,28 +1,28 @@
-{
-  "name": "mxray-play-button",
-  "version": "0.0.1",
-  "authors": [
+﻿{
+  "name":"mxray-play-button",
+  "version":"0.0.1",
+  "authors":[
     "Jeff Durand <jeff.durand@gmail.com>"
   ],
-  "license": "MIT",
-  "ignore": [
+  "license":"MIT",
+  "ignore":[
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
   ],
-  "moduleType": [
+  "moduleType":[
     "globals"
   ],
-  "keywords": [
+  "keywords":[
     "music",
     "mp3",
     "player"
   ],
-  "dependencies": {
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.3",
-    "polymer": "polymer/polymer#^1.0.3",
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.3"
+  "dependencies":{
+    "webcomponentsjs":"webcomponents/webcomponentsjs#^0.7.3",
+    "polymer":"polymer/polymer#^1.0.3",
+    "iron-component-page":"PolymerElements/iron-component-page#^1.0.3"
   }
 }
