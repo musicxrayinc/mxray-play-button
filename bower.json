@@ -1,28 +1,32 @@
-﻿{
-  "name":"mxray-play-button",
-  "version":"0.0.1",
-  "authors":[
-    "Jeff Durand <jeff.durand@gmail.com>"
+{
+  "name": "mxray-play-button",
+  "version": "0.0.1",
+  "homepage": "https://github.com/musicxrayinc/mxray-play-button",
+  "authors": [
+    "jeff durand <jeff.durand@gmail.com>"
   ],
-  "license":"MIT",
-  "ignore":[
+  "description": "Button for maintaining state of media players",
+  "main": "mxray-play-button.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "music",
+    "xray",
+    "song",
+    "mp3",
+    "player"
+  ],
+  "license": "MIT",
+  "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
   ],
-  "moduleType":[
-    "globals"
-  ],
-  "keywords":[
-    "music",
-    "mp3",
-    "player"
-  ],
-  "dependencies":{
-    "webcomponentsjs":"webcomponents/webcomponentsjs#^0.7.3",
-    "polymer":"polymer/polymer#^1.0.3",
-    "iron-component-page":"PolymerElements/iron-component-page#^1.0.3"
+  "dependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.3",
+    "polymer": "polymer/polymer#^1.0.3"
   }
 }
