@@ -1,0 +1,57 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="mxray-play-button">
+  <template>
+    <template is="dom-if" if="{{showplay}}">
+      <span>
+	<content select=".play">
+      <span>
+    </template>
+    <template is="dom-if" if="{{showpause}}">
+      <span>
+	<content select=".pause">
+      </span>
+    </template>
+    <template is="dom-if" if="{{showloading}}">
+      <span>
+	<content select=".loading">
+      </span>
+    </template>
+  </template>
+
+  <script>
+    /* we are trying to simplify the logic around hiding and 
+    * the different player button states
+    */
+    Polymer({
+      is: 'mxray-play-button',
+      properties: {
+	playing: {
+	  type: Boolean,
+	  value: false,
+	  observer: "_stateChanged"
+	},
+	loading: {
+	  type: Boolean,
+	  value: false,
+	  observer: "_stateChanged"
+	}
+      },
+      _stateChanged: function(){
+	this.showloading = false;
+	this.showplay = false;
+	this.showpause = false;
+	
+	if(this.loading){
+	  this.showloading = true;
+	}else{
+	  if(this.playing){
+	    this.showpause = true;
+	  }else{
+	    this.showplay = true;
+	  }
+	}
+      }
+    });
+  </script>
+</dom-module>

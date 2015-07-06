@@ -1,0 +1,38 @@
+{
+  "elements": [
+    {
+      "type": "element",
+      "is": "mxray-play-button",
+      "demos": [
+	{
+	  "desc": "demo",
+	  "path": "demo.html"
+	}
+      ],
+      "desc": "simple play button diplay logic controller",
+      "properties": [
+	{
+	  "name": "playing",
+	  "type": "Boolean",
+	  "desc": "If the media is playing you would set this property to true"
+	}
+      ]
+    }
+  ],
+  "elementsByTagName": {
+    "mxray-play-button": {
+      "type": "element",
+      "is": "mxray-play-button",
+      "desc": "mxray-play-button is a button designed for media playback"
+    },
+    "properties": [
+      {
+	"name": "playing",
+	"type": "Boolean",
+	"desc": "If the media is playing you would set this property to true"
+      }
+    ],
+    behaviors: []
+
+  }
+}
