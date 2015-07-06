@@ -12,7 +12,7 @@
     "test",
     "tests"
   ],
-  moduleType: [
+  "moduleType": [
     "globals"
   ],
   "keywords": [
