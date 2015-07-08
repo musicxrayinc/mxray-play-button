@@ -37,6 +37,12 @@
 	  observer: "_stateChanged"
 	}
       },
+      listeners: {
+	click: "_fireCustomEvent"
+      },
+      _fireCustomEvent: function(){
+	this.fire('playbtnclick');
+      },
       _stateChanged: function(){
 	this.showloading = false;
 	this.showplay = false;
