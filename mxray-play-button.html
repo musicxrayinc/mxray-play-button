@@ -5,17 +5,17 @@
   <template>
     <template is="dom-if" if="{{showplay}}">
       <span>
-	<content select=".play">
+	      <content select=".play">
       <span>
     </template>
     <template is="dom-if" if="{{showpause}}">
       <span>
-	<content select=".pause">
+	      <content select=".pause">
       </span>
     </template>
     <template is="dom-if" if="{{showloading}}">
       <span>
-	<content select=".loading">
+	      <content select=".loading">
       </span>
     </template>
   </template>
@@ -45,46 +45,46 @@ More of a description to follow.
      */ 
 
       properties: {
-	/**
-	 * When set to true and loading set to false then pause button will show
-	 * when set to false and loading set to false then play button will show
-	 * Default is 'false'.
-	 */
-	playing: {
-	  type: Boolean,
-	  value: false,
-	  observer: "_stateChanged"
-	},
-	/**
-	 * When set to true we show the loading button to the exclusion of all other states
-	 * Default is 'false'.
-	 */
-	loading: {
-	  type: Boolean,
-	  value: false,
-	  observer: "_stateChanged"
-	}
+        /**
+        * When set to true and loading set to false then pause button will show
+        * when set to false and loading set to false then play button will show
+        * Default is 'false'.
+        */
+        playing: {
+          type: Boolean,
+          value: false,
+          observer: "_stateChanged"
+        },
+        /**
+        * When set to true we show the loading button to the exclusion of all other states
+        * Default is 'false'.
+        */
+        loading: {
+          type: Boolean,
+          value: false,
+          observer: "_stateChanged"
+        }
       },
       listeners: {
-	click: "_fireCustomEvent"
+	      tap: "_fireCustomEvent"
       },
       _fireCustomEvent: function(){
-	this.fire('playbtnclick');
+	      this.fire('playbtnclick');
       },
       _stateChanged: function(){
-	this.showloading = false;
-	this.showplay = false;
-	this.showpause = false;
-	
-	if(this.loading){
-	  this.showloading = true;
-	}else{
-	  if(this.playing){
-	    this.showpause = true;
-	  }else{
-	    this.showplay = true;
-	  }
-	}
+        this.showloading = false;
+        this.showplay = false;
+        this.showpause = false;
+        
+        if(this.loading){
+          this.showloading = true;
+        }else{
+          if(this.playing){
+            this.showpause = true;
+          }else{
+            this.showplay = true;
+          }
+        }
       }
     });
   </script>
